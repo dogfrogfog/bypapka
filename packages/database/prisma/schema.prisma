@@ -25,6 +25,8 @@ model Business {
   lng            Float
   workTime       String
   socialNetworks String
+  icon           String?
+  country        String?
 
   categoryId Int
   category   Category @relation(fields: [categoryId], references: [id])
@@ -36,5 +38,6 @@ model Category {
   nameRu     String
   nameEn     String
   icon       String
+  slug       String     @unique
   businesses Business[]
 }

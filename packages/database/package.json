@@ -4,7 +4,9 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "scripts": {
-    "build": "prisma generate --no-hints"
+    "build": "prisma generate --no-hints",
+    "update-slugs": "node scripts/update_slugs.js",
+    "update-category-slugs": "node scripts/update_category_slugs.js"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.2",
