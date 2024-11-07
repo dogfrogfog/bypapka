@@ -12,10 +12,29 @@ datasource db {
   relationMode = "prisma"
 }
 
-// This is a stub model.
-// Delete it and add your own Prisma models.
-model Page {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+model Business {
+  id             String   @id @default(cuid())
+  oldId          String   @unique @default(cuid())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  name           String
+  address        String
+  phone          String
+  email          String
+  lat            Float
+  lng            Float
+  workTime       String
+  socialNetworks String
+
+  categoryId Int
+  category   Category @relation(fields: [categoryId], references: [id])
+}
+
+model Category {
+  id         Int        @id @default(autoincrement())
+  nameBy     String
+  nameRu     String
+  nameEn     String
+  icon       String
+  businesses Business[]
 }
