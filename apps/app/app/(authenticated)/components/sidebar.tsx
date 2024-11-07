@@ -1,6 +1,6 @@
 'use client';
 
-import { OrganizationSwitcher, UserButton } from '@clerk/nextjs';
+import { UserButton } from '@clerk/nextjs';
 import { ModeToggle } from '@repo/design-system/components/mode-toggle';
 import {
   Collapsible,
@@ -186,20 +186,9 @@ export const GlobalSidebar = ({ children }: GlobalSidebarProperties) => {
     <>
       <Sidebar variant="inset">
         <SidebarHeader>
+          <h1 className='text-2xl'>bypapka</h1>
           <SidebarMenu>
-            <SidebarMenuItem>
-              <div
-                className={cn(
-                  'h-[36px] overflow-hidden transition-all [&>div]:w-full',
-                  sidebar.open ? '' : '-mx-1'
-                )}
-              >
-                <OrganizationSwitcher
-                  hidePersonal
-                  afterSelectOrganizationUrl="/"
-                />
-              </div>
-            </SidebarMenuItem>
+           
           </SidebarMenu>
         </SidebarHeader>
         <SidebarContent>
