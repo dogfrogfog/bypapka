@@ -9,7 +9,7 @@
     "update-category-slugs": "node scripts/update_category_slugs.js"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^0.10.2",
+    "@neondatabase/serverless": "^0.10.3",
     "@prisma/adapter-neon": "^5.22.0",
     "@prisma/client": "5.22.0",
     "@repo/env": "workspace:*",
